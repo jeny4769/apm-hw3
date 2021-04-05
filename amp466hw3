@@ -1,0 +1,12 @@
+1a
+import numpy as np
+import scipy.linalg as alg
+prob_matrix = np.array([[0.7, 0.2, 0.1, 0], [0.1, 0.5, 0.2, 0.2], [0.1, 0.3, 0.3, 0.3],[0, 0, 0, 1]])
+prob_matrix_3yr = np.linalg.matrix_power(prob_matrix, 3)
+print(prob_matrix_3yr)
+
+1b
+prob_matrix_2month = alg.fractional_matrix_power(prob_matrix, 2/12)
+print(prob_matrix_2month)
+np.linalg.det(prob_matrix_2month)
+
